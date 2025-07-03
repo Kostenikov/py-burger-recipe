@@ -4,7 +4,6 @@ from typing import Any
 
 class Validator(ABC):
     def __set_name__(self, owner: Any, name: str) -> None:
-        self.public_name = name
         self.protected_name = f"_{name}"
 
     def __get__(self, instance: object, owner: Any) -> Any:
